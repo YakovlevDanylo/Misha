@@ -144,27 +144,6 @@ font2 = font.Font(None, 36)
 
 map = Map()
 score = 0
-clock = time.Clock()
-
-score = 0
-finish = False
-run = True
-while run:
-    for e in event.get():
-        if e.type == QUIT:
-            run = False
-
-        if e.type == KEYDOWN and e.key == K_SPACE:
-            player.fire()
-
-    if not finish:
-        window.blit(window, (0, 0))
-
-        text = font2.render(f"Рахунок: {score}", True, (255,255,255))
-        text_lose = font2.render(f"Пропущено: {lost}", True, (255,255,255))
-        window.blit(text, (10, 20))
-        window.blit(text_lose, (510, 20))
-
 
 run = True
 menu = False
